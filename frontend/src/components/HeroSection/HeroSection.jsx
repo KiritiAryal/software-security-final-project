@@ -1,6 +1,26 @@
 import { Box } from "@mui/system";
 import React from "react";
 import heroImage from "../../assets/care.avif";
+import { SignedIn, SignedOut, UserButton, useClerk } from "@clerk/clerk-react";
+import { Button } from "@mui/material";
+
+function SignUpButton() {
+  const clerk = useClerk();
+  return (
+    <Button variant="contained" onClick={() => clerk.openSignUp({})}>
+      SignUp
+    </Button>
+  );
+}
+
+function SignInButton() {
+  const clerk = useClerk();
+  return (
+    <Button variant="contained" onClick={() => clerk.openSignIn({})}>
+      Log In
+    </Button>
+  );
+}
 
 function HeroSection() {
   return (
@@ -9,7 +29,7 @@ function HeroSection() {
         sx={{
           backgroundImage: ` url(${heroImage})`,
           backgroundPosition: "center",
-          backgroundSize: "100vw",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           height: "100vh",
           display: "flex",
@@ -17,6 +37,22 @@ function HeroSection() {
           alignItems: "center",
         }}
       ></Box>
+      <SignedOut>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <SignUpButton />
+          <SignInButton />
+        </Box>
+      </SignedOut>
+
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </>
   );
 }

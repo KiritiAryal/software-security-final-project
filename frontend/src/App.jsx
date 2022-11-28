@@ -1,14 +1,32 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import HeroSection from "./components/HeroSection/HeroSection";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import Homepage from "./components/homepage/Homepage";
+import Questions from "./components/Questions/Questions";
+import TestResults from "./components/TestResults/TestResults";
+import PayBill from "./components/PayBill/PayBill";
+import RequestRefills from "./components/RequestRefills/RequestRefills";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignIn,
+  SignUp,
+  UserButton,
+} from "@clerk/clerk-react";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <HeroSection />
+      <ClerkProvider frontendApi={"clerk.sought.grub-7.lcl.dev"}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/questions" element={<Questions />} />
+            <Route path="/testResults" element={<TestResults />} />
+            <Route path="/payBill" element={<PayBill />} />
+            <Route path="/refills" element={<RequestRefills />} />
+          </Routes>
+        </BrowserRouter>
+      </ClerkProvider>
     </div>
   );
 }
