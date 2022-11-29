@@ -1,10 +1,10 @@
-import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { FormLabel } from "@mui/material";
+import { useState } from "react";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -17,10 +17,10 @@ const MenuProps = {
   },
 };
 
-function getStyles(name, personName, theme) {
+function getStyles(name, option, theme) {
   return {
     fontWeight:
-      personName.indexOf(name) === -1
+      option.indexOf(name) === -1
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
   };
@@ -29,13 +29,13 @@ function getStyles(name, personName, theme) {
 export default function SelectOption({ values, type }) {
   const names = values;
   const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
+  const [option, setOption] = useState([]);
 
   const handleChange = (event) => {
     const {
       target: { value },
     } = event;
-    setPersonName(typeof value === "string" ? value.split(",") : value);
+    setOption(typeof value === "string" ? value.split(",") : value);
   };
 
   return (
@@ -44,7 +44,7 @@ export default function SelectOption({ values, type }) {
         <FormLabel focused={true}>{type}</FormLabel>
         <Select
           displayEmpty
-          value={personName}
+          value={option}
           onChange={handleChange}
           input={<OutlinedInput />}
           renderValue={(selected) => {
@@ -64,7 +64,7 @@ export default function SelectOption({ values, type }) {
             <MenuItem
               key={name}
               value={name}
-              style={getStyles(name, personName, theme)}
+              style={getStyles(name, option, theme)}
             >
               {name}
             </MenuItem>
