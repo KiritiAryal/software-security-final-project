@@ -24,7 +24,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Hydrocodone-Acetaminophen",
-    medicationDescrption: "For Pain Relief, Generic",
+    medicationDescription: "For Pain Relief, Generic",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Hydrochlorothiazide",
-    medicationDescrption: "For High Blood Pressure, Generic",
+    medicationDescription: "For High Blood Pressure, Generic",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Atorvastatin Calcium",
-    medicationDescrption: "For Cholesterol, Generic",
+    medicationDescription: "For Cholesterol, Generic",
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Ventolin",
-    medicationDescrption: "For Asthma, GSK",
+    medicationDescription: "For Asthma, GSK",
   },
   {
     id: 5,
@@ -67,8 +67,8 @@ const patients = [
     testDate: `${testDate}`,
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
-    medication: "	Metformin Hydrochloride",
-    medicationDescrption: "For Diabetes, Generic",
+    medication: "Metformin Hydrochloride",
+    medicationDescription: "For Diabetes, Generic",
   },
   {
     id: 6,
@@ -78,8 +78,8 @@ const patients = [
     testDate: `${testDate}`,
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
-    medication: "	Amoxicillin",
-    medicationDescrption: "For Bacterial Infections, Generic",
+    medication: "Amoxicillin",
+    medicationDescription: "For Bacterial Infections, Generic",
   },
   {
     id: 7,
@@ -90,7 +90,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Gabapentin",
-    medicationDescrption: "Seizures/Neuralgia, Generic",
+    medicationDescription: "Seizures/Neuralgia, Generic",
   },
   {
     id: 8,
@@ -101,7 +101,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Ondansetron",
-    medicationDescrption: "For Nausea/Vomiting, Generic",
+    medicationDescription: "For Nausea/Vomiting, Generic",
   },
   {
     id: 9,
@@ -112,7 +112,7 @@ const patients = [
     availableDate: `${collectedDate}`,
     testResult: "Dont worry you're fine!",
     medication: "Xanax",
-    medicationDescrption: "For Anxiety Disorders and Panic Disorder, Generic",
+    medicationDescription: "For Anxiety Disorders and Panic Disorder, Generic",
   },
 ];
 export default patients;
