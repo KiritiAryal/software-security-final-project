@@ -14,16 +14,9 @@ function NavBar() {
           sx={{
             display: "flex",
             alignContent: "center",
-            justifyContent: "center",
+            justifyContent: "flex-end",
           }}
         >
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
           <Stack sx={{ flexDirection: "row", gap: 4 }}>
             <Button color="buttoncolor" href="/">
               <Typography variant="h6">Home</Typography>

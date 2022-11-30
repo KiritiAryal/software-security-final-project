@@ -2,7 +2,6 @@ import { Button, Card, CardContent, Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import AskQuestion from "../AskQuestion/AskQuestion";
 import SelectStaff from "../../SelectOption/SelectOption";
-// import "./Questions.css";
 import { doctors } from "../../doctors";
 import { topics } from "../../topics";
 import patients from "../../patients";

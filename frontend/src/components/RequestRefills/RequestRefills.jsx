@@ -137,9 +137,9 @@ function RequestRefills() {
                         onChange={handleChange}
                         sx={{ width: "10vw" }}
                       >
-                        <MenuItem value={1}>1-month</MenuItem>
-                        <MenuItem value={3}>3-months</MenuItem>
-                        <MenuItem value={6}>6-months</MenuItem>
+                        <MenuItem value={1}>1-month refill</MenuItem>
+                        <MenuItem value={3}>3-months refill</MenuItem>
+                        <MenuItem value={6}>6-months refill</MenuItem>
                       </Select>
                     </FormControl>
                   </CardActions>
@@ -201,7 +201,7 @@ function RequestRefills() {
         {showAlert && (
           <Stack sx={{ width: "100%" }} spacing={2}>
             <Alert onClose={() => setShowAlert(false)}>
-              This is a success alert — check it out!
+              Prescription Refill Request Received!
             </Alert>
           </Stack>
         )}

@@ -4,23 +4,23 @@ import heroImage from "../../assets/care.avif";
 import { SignedIn, SignedOut, UserButton, useClerk } from "@clerk/clerk-react";
 import { Button } from "@mui/material";
 
-function SignUpButton() {
-  const clerk = useClerk();
-  return (
-    <Button variant="contained" onClick={() => clerk.openSignUp({})}>
-      SignUp
-    </Button>
-  );
-}
+// function SignUpButton() {
+//   const clerk = useClerk();
+//   return (
+//     <Button variant="contained" onClick={() => clerk.openSignUp({})}>
+//       SignUp
+//     </Button>
+//   );
+// }
 
-function SignInButton() {
-  const clerk = useClerk();
-  return (
-    <Button variant="contained" onClick={() => clerk.openSignIn({})}>
-      Log In
-    </Button>
-  );
-}
+// function SignInButton() {
+//   const clerk = useClerk();
+//   return (
+//     <Button variant="contained" onClick={() => clerk.openSignIn({})}>
+//       Log In
+//     </Button>
+//   );
+// }
 
 function HeroSection() {
   return (
@@ -37,7 +37,7 @@ function HeroSection() {
           alignItems: "center",
         }}
       ></Box>
-      <SignedOut>
+      {/* <SignedOut>
         <Box
           sx={{
             display: "flex",
@@ -52,7 +52,7 @@ function HeroSection() {
 
       <SignedIn>
         <UserButton />
-      </SignedIn>
+      </SignedIn> */}
     </>
   );
 }
