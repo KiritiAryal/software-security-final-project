@@ -1,4 +1,4 @@
-export const doctors = [
+export const physicians = [
   "Dr. Oliver Hansen",
   "Dr. Van Henry",
   "Dr. April Tucker",

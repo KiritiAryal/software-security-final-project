@@ -7,9 +7,9 @@ import {
 } from "@mui/material";
 import React, { useRef, useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import patients from "../../patients";
+import patients from "../patients";
 // import "./TestResults.css";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "./NavBar";
 
 function TestResults() {
   const [expanded, setExpanded] = useState("");

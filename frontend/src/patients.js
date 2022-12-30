@@ -1,3 +1,5 @@
+import { medications } from "./medications";
+
 function padTo2Digits(num) {
   return num.toString().padStart(2, "0");
 }
@@ -9,110 +11,101 @@ function formatDate(date) {
     date.getFullYear(),
   ].join("/");
 }
-const testDate = formatDate(
-  new Date(new Date().getTime() - 7 * 24 * 60 * 60 * 1000)
-);
-const collectedDate = formatDate(new Date());
 
+const resultDate = [
+  formatDate(
+    randomDate(
+      new Date(new Date()),
+      new Date(new Date().getTime() - 7 * 24 * 60 * 60 * 1000)
+    )
+  ),
+  formatDate(
+    randomDate(
+      new Date(new Date()),
+      new Date(new Date().getTime() - 7 * 24 * 60 * 60 * 1000)
+    )
+  ),
+  formatDate(
+    randomDate(
+      new Date(new Date()),
+      new Date(new Date().getTime() - 7 * 24 * 60 * 60 * 1000)
+    )
+  ),
+  formatDate(
+    randomDate(
+      new Date(new Date()),
+      new Date(new Date().getTime() - 7 * 24 * 60 * 60 * 1000)
+    )
+  ),
+];
+
+function randomDate(start, end) {
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
+}
+
+const testDate = [
+  formatDate(
+    randomDate(
+      new Date(new Date().getTime() - 8 * 24 * 60 * 60 * 1000),
+      new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000)
+    )
+  ),
+  formatDate(
+    randomDate(
+      new Date(new Date().getTime() - 8 * 24 * 60 * 60 * 1000),
+      new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000)
+    )
+  ),
+  formatDate(
+    randomDate(
+      new Date(new Date().getTime() - 8 * 24 * 60 * 60 * 1000),
+      new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000)
+    )
+  ),
+  formatDate(
+    randomDate(
+      new Date(new Date().getTime() - 8 * 24 * 60 * 60 * 1000),
+      new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000)
+    )
+  ),
+];
+function myFunction(item, index) {
+  item;
+}
 const patients = [
   {
     id: 1,
-    topic: "general",
-    issue: "headache",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Hydrocodone-Acetaminophen",
+    testDate: `${testDate[0]}`,
+    availableDate: `${resultDate[0]}`,
+    testResult: "All tests came back good!",
+    medication: `${medications[0]}`,
     medicationDescription: "For Pain Relief, Generic",
   },
   {
     id: 2,
-    topic: "emergency",
-    issue: "very hard",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Hydrochlorothiazide",
+    testDate: `${testDate[1]}`,
+    availableDate: `${resultDate[1]}`,
+    testResult: "Your teeth are in good health!",
+    medication: `${medications[1]}`,
     medicationDescription: "For High Blood Pressure, Generic",
   },
   {
     id: 3,
-    topic: "general",
-    issue: "headache",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Atorvastatin Calcium",
+    testDate: `${testDate[2]}`,
+    availableDate: `${resultDate[2]}`,
+    testResult: "The medication is working as expected!",
+    medication: `${medications[2]}`,
     medicationDescription: "For Cholesterol, Generic",
   },
   {
     id: 4,
-    topic: "general",
-    issue: "headache",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Ventolin",
+    testDate: `${testDate[3]}`,
+    availableDate: `${resultDate[3]}`,
+    testResult: "The fractures are healing in a good pace.",
+    medication: `${medications[3]}`,
     medicationDescription: "For Asthma, GSK",
-  },
-  {
-    id: 5,
-    topic: "emergency",
-    issue: "very hard",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Metformin Hydrochloride",
-    medicationDescription: "For Diabetes, Generic",
-  },
-  {
-    id: 6,
-    topic: "general",
-    issue: "headache",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Amoxicillin",
-    medicationDescription: "For Bacterial Infections, Generic",
-  },
-  {
-    id: 7,
-    topic: "emergency",
-    issue: "very hard",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Gabapentin",
-    medicationDescription: "Seizures/Neuralgia, Generic",
-  },
-  {
-    id: 8,
-    topic: "emergency",
-    issue: "very hard",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Ondansetron",
-    medicationDescription: "For Nausea/Vomiting, Generic",
-  },
-  {
-    id: 9,
-    topic: "optimetric",
-    issue: "vary good",
-    physician: "Dr. Woongla Boongla",
-    testDate: `${testDate}`,
-    availableDate: `${collectedDate}`,
-    testResult: "Dont worry you're fine!",
-    medication: "Xanax",
-    medicationDescription: "For Anxiety Disorders and Panic Disorder, Generic",
   },
 ];
 export default patients;

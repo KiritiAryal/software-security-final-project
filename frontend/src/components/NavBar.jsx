@@ -3,7 +3,7 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Box, Stack } from "@mui/system";
+import { Stack } from "@mui/system";
 import { Button } from "@mui/material";
 
 function NavBar() {

@@ -13,10 +13,9 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import { useEffect } from "react";
 import { useState } from "react";
-import patients from "../../patients";
-import NavBar from "../NavBar/NavBar";
+import patients from "../patients";
+import NavBar from "./NavBar";
 
 const style = {
   position: "absolute",
@@ -45,12 +44,6 @@ function RequestRefills() {
     setOpen(false);
   };
 
-  useEffect(() => {
-    setTimeout(
-      setShowAlert((state) => (state = false)),
-      1000
-    );
-  }, []);
   return (
     <>
       <Box
@@ -69,14 +62,10 @@ function RequestRefills() {
         <Card
           sx={{
             p: 5,
-            height: "100vh",
             display: "flex",
-            flexDirection: "column",
             width: "80vw",
             gap: 5,
             flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "space-around",
             background: "#DBE2E9",
             overflow: "scroll",
             borderRadius: 3,
@@ -197,7 +186,7 @@ function RequestRefills() {
             </Box>
           </Box>
         </Modal>
-        {console.log(showAlert)}
+
         {showAlert && (
           <Stack sx={{ width: "100%" }} spacing={2}>
             <Alert onClose={() => setShowAlert(false)}>

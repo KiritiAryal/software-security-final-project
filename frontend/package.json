@@ -9,14 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@clerk/clerk-react": "^4.5.3",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.10.15",
     "@mui/material": "^5.10.15",
     "@mui/styled-engine-sc": "^5.10.14",
-    "@reduxjs/toolkit": "^1.9.0",
     "axios": "^1.2.0",
     "formik": "^2.2.9",
     "r": "^0.0.5",
@@ -25,7 +23,6 @@
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
-    "redux": "^4.2.0",
     "styled-components": "^5.3.6",
     "yup": "^0.32.11"
   },

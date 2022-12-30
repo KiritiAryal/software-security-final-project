@@ -1,8 +1,8 @@
 # Secure Health Information System(SHIS)
 
-## React for FrontEnd and SpringBoot for BackEnd
+## React for FrontEnd
 
-## Instructions for running frontend
+# Open terminal or command prompt and:
 
 Install dependencies
 
@@ -10,14 +10,10 @@ Install dependencies
 yarn
 ```
 
-Run project on your local system
+To run project on your local system
 
 ```
 yarn dev
 ```
 
-# Instructions for runnign backend
-
-```
-mvn spring-boot:run
-```
+Go to your browser and paste in the url in the terminal. Should look something like this "http://127.0.0.1:5173/". Use the navigation bar at the top to navigate to different functionalities. All the files required for the project are already in the required filepaths.

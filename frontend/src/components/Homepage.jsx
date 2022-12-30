@@ -1,5 +1,5 @@
-import HeroSection from "../HeroSection/HeroSection";
-import NavBar from "../NavBar/NavBar";
+import HeroSection from "./HeroSection";
+import NavBar from "./NavBar";
 
 function Homepage() {
   return (
